@@ -1,0 +1,37 @@
+CREATE TABLE `participant` (
+  `Name` varchar(100) NOT NULL,
+  `ID` varchar(100) NOT NULL,
+  `Ans1` varchar(100) NOT NULL,
+  `Q2Min` varchar(100) NOT NULL,
+  `Q2Sec` varchar(100) NOT NULL,
+  `Ans2` varchar(100) NOT NULL,
+  `Q3Min` varchar(100) NOT NULL,
+  `Q3Sec` varchar(100) NOT NULL,
+  `Ans3` varchar(100) NOT NULL,
+  `Q4Min` varchar(100) NOT NULL,
+  `Q4Sec` varchar(100) NOT NULL,
+  `Ans4` varchar(100) NOT NULL,
+  `Q5Min` varchar(100) NOT NULL,
+  `Q5Sec` varchar(100) NOT NULL,
+  `Ans5` varchar(100) NOT NULL,
+  `IP` varchar(20) NOT NULL,
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `participant`
+  ADD PRIMARY KEY (`ID`);
+
+CREATE TABLE `events` (
+  `eventname` varchar(20) NOT NULL,
+  `isHosted` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+INSERT INTO `events` (`eventname`, `isHosted`) VALUES
+('Googler', 0);
+
+
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`eventname`);
